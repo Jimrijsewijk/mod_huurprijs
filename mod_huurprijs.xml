@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension 	type="module"	version="2.5"	client="site"	method="upgrade">
+	<name>MOD_HUURPRIJS</name>
+	<author>Jim v Rijsewijk | Dayman Media</author>
+	<creationDate>Jan 2014</creationDate>
+	<copyright>Copyright (C) 2014. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later;</license>
+	<authorEmail>jim@dayman.nl</authorEmail>
+	<authorUrl>www.dayman.nl</authorUrl>
+	<version>1.0.0</version>
+	<description>MOD_HUURPRIJS_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_huurprijs">mod_huurprijs.php</filename>
+		<folder>tmpl</folder>
+		<folder>css</folder>
+		<filename>index.html</filename>		
+		<filename>mod_huurprijs.xml</filename>
+	</files>
+	<languages>
+		<language tag="nl-NL">language/nl-NL.mod_huurprijs.ini</language>
+		<language tag="nl-NL">language/nl-NL.mod_huurprijs.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field type="spacer" name="myspacer" class="text" label="MOD_HUURPRIJS_HOOGSEIZOEN_LABEL"/>
+				<field 
+					name="basisH" 
+					type="text" 
+					default="" 
+					size="40" 
+					label="MOD_HUURPRIJS_BASISHOOGSEIZOEN" 
+					description="MOD_HUURPRIJS_BASISHOOGSEIZOEN_DESCRIPTION" 
+				/>
+				<field 
+					name="pppdH" 
+					type="text" 
+					default="" 
+					size="40" 
+					label="MOD_HUURPRIJS_PPPDHOOGSEIZOEN" 
+					description="MOD_HUURPRIJS_PPPDHOOGSEIZOEN_DESCRIPTION" 
+				/>
+				<field 
+					name="basisM" 
+					type="text" 
+					default="" 
+					size="40" 
+					label="MOD_HUURPRIJS_BASISMIDDENSEIZOEN" 
+					description="MOD_HUURPRIJS_BASISMIDDENSEIZOEN_DESCRIPTION" 
+				/>
+				<field 
+					name="pppdM" 
+					type="text" 
+					default="" 
+					size="40" 
+					label="MOD_HUURPRIJS_PPPDMIDDENSEIZOEN" 
+					description="MOD_HUURPRIJS_PPPDMIDDENSEIZOEN_DESCRIPTION" 
+				/>
+				<field 
+					name="basisL" 
+					type="text" 
+					default="" 
+					size="40" 
+					label="MOD_HUURPRIJS_BASISLAAGSEIZOEN" 
+					description="MOD_HUURPRIJS_BASISLAAGSEIZOEN_DESCRIPTION" 
+				/>
+				<field 
+					name="pppdL" 
+					type="text" 
+					default="" 
+					size="40" 
+					label="MOD_HUURPRIJS_PPPDLAAGSEIZOEN" 
+					description="MOD_HUURPRIJS_PPPDLAAGSEIZOEN_DESCRIPTION" 
+				/>
+			</fieldset>
+			
+			<fieldset name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field
+					name="owncache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option	value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
